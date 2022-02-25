@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Homework 2: Trees and Calibration
+# # Project 2: Trees and Calibration
 # 
 # 
 # ## Instructions
