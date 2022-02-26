@@ -100,7 +100,7 @@
 # dtCreatedAt - Date at which this current row was added. (Date)
 # 
 
-# ## Question 1: Decision Trees
+# ## Part 1: Decision Trees
 
 # **1.1: Load the provided dataset**
 
@@ -326,7 +326,7 @@ print("It seems that the three most important features are qtSurvived (Number of
 print("It makes sense that if a player survives more rounds he will win, so this is why this is the most important feature for the tree, and thus the strongest predictor for winning. The qtDeath also makes sense because even though a player is dying, it means he is being more active, and directing opponent player attention towards himself, away from potentially better players who can win the game. qtTrade also makes sense because if a player gets a trade kill, it means he must be a skilled active player, meaning that it is more likely for him to win. ")
 
 
-# ## Question 2: Random Forests
+# ## Part 2: Random Forests
 
 # **2.1: Train a Random Forest model on the development dataset using RandomForestClassifier class in sklearn. Use the default parameters. Evaluate the performance of the model on test dataset. Does this perform better than Decision Tree on the test dataset (compare to results in Q 1.6)?**
 
@@ -432,7 +432,7 @@ ax.tick_params(axis='x', rotation=90)
 print("The top 2 features remain the same, but the third feature, Rounds played, makes more sense. This is because it makes sense that if a player played for more rounds overall, they would likely be better at the game so would have a higher probability of winning.")
 
 
-# ## Question 3: Gradient Boosted Trees
+# ## Part 3: Gradient Boosted Trees
 
 # **3.1: Choose three hyperparameters to tune GradientBoostingClassifier and HistGradientBoostingClassifier on the development dataset using 5-fold cross validation. Report on the time taken to do model selection for both the models. Also, report the performance of the test dataset from the optimal models.**
 
@@ -549,13 +549,14 @@ print(f"Best Params:\t", rand_search_results.best_params_)
 print(f"Test Score:\t", pipe.score(top7_X_test, y_test))
 
 
-# In[60]:
+# In[147]:
 
 
 print("The performance is roughly the same when we use the top 7 features because we removed data and features that were deemed irrelevant to the prediction. Even though we removed a lot of data, by decreasing the amount of noisy, irrelevant data, this allows the model to more easily learn.")
+print("Even though the data size decreased significantly, the model trained much faster and the accuracy remained around the same. ")
 
 
-# ## Question 4: Calibration
+# ## Part 4: Calibration
 
 # **4.1: Estimate the brier score for the XGBoost model (trained with optimal hyperparameters from Q3.2) scored on the test dataset.**
 
